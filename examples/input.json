@@ -1,0 +1,8 @@
+{
+  "searchTerms": [
+    "milk",
+    "eggs"
+  ],
+  "maxItemsPerStore": 20,
+  "sortBy": "unit_price_low"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "store": "Woolworths",
+    "searchTerm": "milk",
+    "name": "Woolworths Full Cream Milk 3L",
+    "brand": "Woolworths",
+    "size": "3L",
+    "price": 4.95,
+    "wasPrice": null,
+    "onSpecial": false,
+    "unitPriceText": "$1.65 / 1L",
+    "pricePerUnit": 1.65,
+    "perUnit": "L",
+    "barcode": "9300633556150",
+    "available": true,
+    "productUrl": "https://www.woolworths.com.au/shop/productdetails/888140"
+  }
+]
