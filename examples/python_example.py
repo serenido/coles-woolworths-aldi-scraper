@@ -4,7 +4,7 @@ from apify_client import ApifyClient
 
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 
-run = client.actor("teegemspod/au-supermarket-prices").call(run_input={
+run = client.actor("serenido/au-supermarket-prices").call(run_input={
     "searchTerms": [
         "milk",
         "eggs"

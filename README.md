@@ -2,9 +2,9 @@
 
 Search Coles, Woolworths and ALDI at once. Get price, was price, specials, unit price per kg or L, barcode and stock, plus a free cheapest-store comparison.
 
-Runs in the cloud on Apify. No servers, no proxy setup, no code to maintain. **[Open it on Apify](https://apify.com/teegemspod/au-supermarket-prices)**
+Runs in the cloud on Apify. No servers, no proxy setup, no code to maintain. **[Open it on Apify](https://apify.com/serenido/au-supermarket-prices)**
 
-**Price:** $0.30 per 1,000 products, plus $0.00005 per run. No monthly fee. Apify's free plan gives $5 of usage every month, no credit card needed. [Current price](https://apify.com/teegemspod/au-supermarket-prices/pricing).
+**Price:** $0.30 per 1,000 products, plus $0.00005 per run. No monthly fee. Apify's free plan gives $5 of usage every month, no credit card needed. [Current price](https://apify.com/serenido/au-supermarket-prices/pricing).
 
 ## What you get
 
@@ -25,7 +25,7 @@ from apify_client import ApifyClient
 
 client = ApifyClient("YOUR_APIFY_TOKEN")
 
-run = client.actor("teegemspod/au-supermarket-prices").call(run_input={
+run = client.actor("serenido/au-supermarket-prices").call(run_input={
     "searchTerms": [
         "milk",
         "eggs"
@@ -49,7 +49,7 @@ import { ApifyClient } from "apify-client";
 
 const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
 
-const run = await client.actor("teegemspod/au-supermarket-prices").call({
+const run = await client.actor("serenido/au-supermarket-prices").call({
     "searchTerms": [
         "milk",
         "eggs"
@@ -67,7 +67,7 @@ console.log(items);
 Runs the tool and returns the rows in one request. Good for runs under 5 minutes; for bigger runs use the Python or JavaScript example.
 
 ```bash
-curl -X POST "https://api.apify.com/v2/acts/teegemspod~au-supermarket-prices/run-sync-get-dataset-items?token=$APIFY_TOKEN" \
+curl -X POST "https://api.apify.com/v2/acts/serenido~au-supermarket-prices/run-sync-get-dataset-items?token=$APIFY_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"searchTerms": ["milk", "eggs"], "maxItemsPerStore": 20, "sortBy": "unit_price_low"}'
 ```
@@ -76,13 +76,13 @@ Get your token in [Apify Console > Settings > API & Integrations](https://consol
 
 ## Use it from AI apps (MCP)
 
-Any app that supports remote MCP servers (Claude, ChatGPT, Cursor, VS Code and others) can run this tool for you. Add this server URL: `https://mcp.apify.com?tools=teegemspod/au-supermarket-prices`. Your Apify account connects on first use. Example config for Cursor:
+Any app that supports remote MCP servers (Claude, ChatGPT, Cursor, VS Code and others) can run this tool for you. Add this server URL: `https://mcp.apify.com?tools=serenido/au-supermarket-prices`. Your Apify account connects on first use. Example config for Cursor:
 
 ```json
 {
   "mcpServers": {
     "apify": {
-      "url": "https://mcp.apify.com?tools=teegemspod/au-supermarket-prices"
+      "url": "https://mcp.apify.com?tools=serenido/au-supermarket-prices"
     }
   }
 }
@@ -101,7 +101,7 @@ Any app that supports remote MCP servers (Claude, ChatGPT, Cursor, VS Code and o
 }
 ```
 
-Turn single stores on or off, or ask for specials only. All options are listed on the [input page](https://apify.com/teegemspod/au-supermarket-prices/input-schema).
+Turn single stores on or off, or ask for specials only. All options are listed on the [input page](https://apify.com/serenido/au-supermarket-prices/input-schema).
 
 ## Output example (one row)
 
@@ -142,6 +142,6 @@ Download as JSON, CSV or Excel, or connect to Make, Zapier or n8n.
 
 ## Support
 
-Found a bug or need a field? Open an issue here or on the [Issues tab on Apify](https://apify.com/teegemspod/au-supermarket-prices/issues).
+Found a bug or need a field? Open an issue here or on the [Issues tab on Apify](https://apify.com/serenido/au-supermarket-prices/issues).
 
 Use it only for public data and follow the website's terms and the laws that apply to you. This project is not affiliated with the websites it reads.

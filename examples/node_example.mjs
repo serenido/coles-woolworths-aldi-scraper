@@ -2,7 +2,7 @@ import { ApifyClient } from "apify-client";
 
 const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
 
-const run = await client.actor("teegemspod/au-supermarket-prices").call({
+const run = await client.actor("serenido/au-supermarket-prices").call({
     "searchTerms": [
         "milk",
         "eggs"
